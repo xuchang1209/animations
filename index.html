@@ -1,35 +1,38 @@
+
 <!DOCTYPE html>
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <style>
-        body{margin:0px;}
-        svg {
-        //border:solid 1px #666;
-            overflow:hidden;
-        }
+<meta charset="utf-8">
+<head><style>
+    body{margin:0px;}
+    svg {
+    //border:solid 1px #666;
+        overflow:hidden;
+    }
 
-        path {
-            fill:yellow;
-            stroke:#000;
-            stroke-width:.5px;
-        }
+    path {
+        fill:yellow;
+        stroke:#000;
+        stroke-width:.5px;
+    }
 
-        circle {
-            fill:#ccc;
-            stroke:#000;
-            pointer-events:none;
-        }
-        #button {position:absolute;top:10px;left:400px;}
-        #title {position:absolute;top:12px;left:0px;width:500px;text-align:center;}
-        .btn { display:inline-block;*display:inline;/* IE7 inline-block hack */ *zoom:1;padding:4px 10px 4px;margin-bottom:0;font-size:13px;line-height:18px;color:#333333;text-align:center;text-shadow:0 1px 1px rgba(255,255,255,0.75);vertical-align:middle;background-color:#f5f5f5;background-image:-moz-linear-gradient(top,#ffffff,#e6e6e6);background-image:-ms-linear-gradient(top,#ffffff,#e6e6e6);background-image:-webkit-gradient(linear,0 0,0 100%,from(#ffffff),to(#e6e6e6));background-image:-webkit-linear-gradient(top,#ffffff,#e6e6e6);background-image:-o-linear-gradient(top,#ffffff,#e6e6e6);background-image:linear-gradient(top,#ffffff,#e6e6e6);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#e6e6e6',GradientType=0);border-color:#e6e6e6 #e6e6e6 #bfbfbf;border-color:rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);filter:progid:dximagetransform.microsoft.gradient(enabled=false);border:1px solid #cccccc;border-bottom-color:#b3b3b3;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);-moz-box-shadow:inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);box-shadow:inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);cursor:pointer;*margin-left:.3em;} .btn:hover,.btn:active,.btn.active,.btn.disabled,.btn[disabled] { background-color:#e6e6e6;} .btn:active,.btn.active { background-color:#cccccc \9;} .btn:first-child { *margin-left:0;} .btn:hover { color:#333333;text-decoration:none;background-color:#e6e6e6;background-position:0 -15px;-webkit-transition:background-position 0.1s linear;-moz-transition:background-position 0.1s linear;-ms-transition:background-position 0.1s linear;-o-transition:background-position 0.1s linear;transition:background-position 0.1s linear;} .btn:focus { outline:thin dotted #333;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;} .btn.active,.btn:active { background-image:none;-webkit-box-shadow:inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);-moz-box-shadow:inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);box-shadow:inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);background-color:#e6e6e6;background-color:#d9d9d9 \9;outline:0;} .btn.disabled,.btn[disabled] { cursor:default;background-image:none;background-color:#e6e6e6;opacity:0.65;filter:alpha(opacity=65);-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;} .btn-mini { padding:2px 6px;font-size:11px;line-height:14px;}
-        svg {border:1px solid black;}
-        </style></head>
+    circle {
+        fill:#ccc;
+        stroke:#000;
+        pointer-events:none;
+    }
+    #button {position:absolute;top:10px;left:400px;}
+    #title {position:absolute;top:12px;left:0px;width:500px;text-align:center;}
+    .btn { display:inline-block;*display:inline;/* IE7 inline-block hack */ *zoom:1;padding:4px 10px 4px;margin-bottom:0;font-size:13px;line-height:18px;color:#333333;text-align:center;text-shadow:0 1px 1px rgba(255,255,255,0.75);vertical-align:middle;background-color:#f5f5f5;background-image:-moz-linear-gradient(top,#ffffff,#e6e6e6);background-image:-ms-linear-gradient(top,#ffffff,#e6e6e6);background-image:-webkit-gradient(linear,0 0,0 100%,from(#ffffff),to(#e6e6e6));background-image:-webkit-linear-gradient(top,#ffffff,#e6e6e6);background-image:-o-linear-gradient(top,#ffffff,#e6e6e6);background-image:linear-gradient(top,#ffffff,#e6e6e6);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#e6e6e6',GradientType=0);border-color:#e6e6e6 #e6e6e6 #bfbfbf;border-color:rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);filter:progid:dximagetransform.microsoft.gradient(enabled=false);border:1px solid #cccccc;border-bottom-color:#b3b3b3;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);-moz-box-shadow:inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);box-shadow:inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);cursor:pointer;*margin-left:.3em;} .btn:hover,.btn:active,.btn.active,.btn.disabled,.btn[disabled] { background-color:#e6e6e6;} .btn:active,.btn.active { background-color:#cccccc \9;} .btn:first-child { *margin-left:0;} .btn:hover { color:#333333;text-decoration:none;background-color:#e6e6e6;background-position:0 -15px;-webkit-transition:background-position 0.1s linear;-moz-transition:background-position 0.1s linear;-ms-transition:background-position 0.1s linear;-o-transition:background-position 0.1s linear;transition:background-position 0.1s linear;} .btn:focus { outline:thin dotted #333;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;} .btn.active,.btn:active { background-image:none;-webkit-box-shadow:inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);-moz-box-shadow:inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);box-shadow:inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);background-color:#e6e6e6;background-color:#d9d9d9 \9;outline:0;} .btn.disabled,.btn[disabled] { cursor:default;background-image:none;background-color:#e6e6e6;opacity:0.65;filter:alpha(opacity=65);-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;} .btn-mini { padding:2px 6px;font-size:11px;line-height:14px;}
+
+    }
+    svg {border:1px solid black;}
+    }</style></head>
 <body>
-<script src="./d3.v2.min.js"></script>
+<script src="./d3.v2.min.js?2.8.1"></script>
 <div id="chart" style="width:500px;height:250px">
     <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="500" height="200">
-        <line x1="0" x2="0" y1="40" y2="250" style="stroke: rgb(238, 238, 238);"></line><line x1="20" x2="20" y1="40" y2="250" style="stroke: rgb(238, 238, 238);"></line><line x1="40" x2="40" y1="40" y2="250" style="stroke: rgb(238, 238, 238);"></line><line x1="60" x2="60" y1="40" y2="250" style="stroke: rgb(238, 238, 238);"></line><line x1="80" x2="80" y1="40" y2="250" style="stroke: rgb(238, 238, 238);"></line><line x1="100" x2="100" y1="40" y2="250" style="stroke: rgb(238, 238, 238);"></line><line x1="120" x2="120" y1="40" y2="250" style="stroke: rgb(238, 238, 238);"></line><line x1="140" x2="140" y1="40" y2="250" style="stroke: rgb(238, 238, 238);"></line><line x1="160" x2="160" y1="40" y2="250" style="stroke: rgb(238, 238, 238);"></line><line x1="180" x2="180" y1="40" y2="250" style="stroke: rgb(238, 238, 238);"></line><line x1="200" x2="200" y1="40" y2="250" style="stroke: rgb(238, 238, 238);"></line><line x1="220" x2="220" y1="40" y2="250" style="stroke: rgb(238, 238, 238);"></line><line x1="240" x2="240" y1="40" y2="250" style="stroke: rgb(238, 238, 238);"></line><line x1="260" x2="260" y1="40" y2="250" style="stroke: rgb(238, 238, 238);"></line><line x1="280" x2="280" y1="40" y2="250" style="stroke: rgb(238, 238, 238);"></line><line x1="300" x2="300" y1="40" y2="250" style="stroke: rgb(238, 238, 238);"></line><line x1="320" x2="320" y1="40" y2="250" style="stroke: rgb(238, 238, 238);"></line><line x1="340" x2="340" y1="40" y2="250" style="stroke: rgb(238, 238, 238);"></line><line x1="360" x2="360" y1="40" y2="250" style="stroke: rgb(238, 238, 238);"></line><line x1="380" x2="380" y1="40" y2="250" style="stroke: rgb(238, 238, 238);"></line><line x1="400" x2="400" y1="40" y2="250" style="stroke: rgb(238, 238, 238);"></line><line x1="420" x2="420" y1="40" y2="250" style="stroke: rgb(238, 238, 238);"></line><line x1="440" x2="440" y1="40" y2="250" style="stroke: rgb(238, 238, 238);"></line><line x1="460" x2="460" y1="40" y2="250" style="stroke: rgb(238, 238, 238);"></line><line x1="480" x2="480" y1="40" y2="250" style="stroke: rgb(238, 238, 238);"></line><line x1="500" x2="500" y1="40" y2="250" style="stroke: rgb(238, 238, 238);"></line><line y1="40" y2="40" x1="0" x2="500" style="stroke: rgb(238, 238, 238);"></line><line y1="60" y2="60" x1="0" x2="500" style="stroke: rgb(238, 238, 238);"></line><line y1="80" y2="80" x1="0" x2="500" style="stroke: rgb(238, 238, 238);"></line><line y1="100" y2="100" x1="0" x2="500" style="stroke: rgb(238, 238, 238);"></line><line y1="120" y2="120" x1="0" x2="500" style="stroke: rgb(238, 238, 238);"></line><line y1="140" y2="140" x1="0" x2="500" style="stroke: rgb(238, 238, 238);"></line><line y1="160" y2="160" x1="0" x2="500" style="stroke: rgb(238, 238, 238);"></line><line y1="180" y2="180" x1="0" x2="500" style="stroke: rgb(238, 238, 238);"></line><line y1="200" y2="200" x1="0" x2="500" style="stroke: rgb(238, 238, 238);"></line><line y1="220" y2="220" x1="0" x2="500" style="stroke: rgb(238, 238, 238);"></line><line y1="240" y2="240" x1="0" x2="500" style="stroke: rgb(238, 238, 238);"></line><rect id="s0" x="50" y="150" width="80" height="100" style="stroke: none; fill: steelblue;"></rect><rect id="s1" x="150" y="100" width="80" height="150" style="stroke: none; fill: steelblue;"></rect><rect id="s2" x="250" y="120" width="80" height="130" style="stroke: none; fill: steelblue;"></rect><rect id="s3" x="350" y="80" width="80" height="170" style="stroke: none; fill: darkred;"></rect></svg>
-    <div id="title">Bar chart (unanimated)</div>
-
+    </svg>
+    <div id="title">Movement</div>
+    <button class="btn btn-mini" id="button">Transition</button>
 
 </div>
 
@@ -681,5 +684,5 @@
 </script>
 
 
-
-; </body></html>
+</body>
+</html>; 
